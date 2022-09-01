@@ -1,5 +1,41 @@
 # https-github.com-rdpeng-ProgrammingAssignment2-
 #Problem #1
-#This function below creates a special matrix object that is able to be cached in the inverse. 
+#The makeCacheMatrix function below creates a special matrix object that is able to be cached in the inverse. 
 makeCacheMatrix <<- function(x = matrix()) {
+# establishes inverse property 
 inv <- NULL
+#establish function
+set <- function(y){
+x <<-y 
+inv <<- NULL
+}
+#method to get function
+get <- function(x)
+#method to set inverse 
+setinverse <- function(solveMatrix)inv <<- solveMatrix
+#method to get inverse of the function
+getinverse <- function(inv)
+list(set = set, get = get, setInverse = setInverse, getInverse = getInverse)
+}
+
+#Problem 2 
+#The cacheSolve function below produces the inverse of the special matrix object created bt the makeCacheMatrix function above. 
+It should retrieve the inverse from the cache. 
+cachSolve <- function(x,...){
+#Return a matrix that is the inverse of 'x'
+inv <- x$getInverse(
+#if statement 
+if(!is.null(inv))[
+message("getting cached data")
+return(inv)
+}
+#getting the matrix from the object 
+data <- x$get()
+#calculates the inverse
+inv <- solve(data)
+#set the inverse to the object 
+x$setInverse(inv)
+#return to the matrix 
+inv 
+
+
