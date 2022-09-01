@@ -1,5 +1,4 @@
 # https-github.com-rdpeng-ProgrammingAssignment2-
-
 #Problem #1
 makeCacheMatrix <- function( x = matrix) {
 inv <- NULL 
@@ -10,7 +9,6 @@ inv <<- NULL
 get <- function(x)
 setinv <- function(solveMatrix)inv << solveMatrix 
 getinv<- function(inv)}
-
 
 #Problem 2
 cacheSolve <- function(x){
@@ -23,4 +21,3 @@ data <- x$get()
 inv <- solve(data)
 x$setinv(inv)
 inv
-
