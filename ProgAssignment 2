@@ -1,4 +1,5 @@
 # https-github.com-rdpeng-ProgrammingAssignment2-
 #Problem #1
+#This function below creates a special matrix object that is able to be cached in the inverse. 
 makeCacheMatrix <<- function(x = matrix()) {
 inv <- NULL
